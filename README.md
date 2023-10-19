@@ -28,24 +28,6 @@ micrograd = "0.1.0"
 
 ## Quick Start
 
-Here's how to create a simple computation graph and compute gradients:
+You can run the code by
 
-```rust
-use micrograd::prelude::*;
-
-fn main() {
-    // Create some values
-    let a = Value::new(1.0);
-    let b = Value::new(2.0);
-    let c = Value::new(3.0);
-
-    // Perform computations
-    let result = &a * &b + &c;
-
-    // Compute gradients
-    result.backward();
-
-    // Access gradients
-    println!("{}, {}, {}", a.grad(), b.grad(), c.grad());
-}
-```
+`$ cargo run --example demo`
